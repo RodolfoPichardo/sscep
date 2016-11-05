@@ -501,6 +501,8 @@ main(int argc, char **argv) {
 		sig_alg = (EVP_MD *)EVP_md5();
 	} else if (!strncmp(S_char, "sha1", 4)) {
 		sig_alg = (EVP_MD *)EVP_sha1();
+    } else if (!strncmp(S_char, "sha256", 6)) {
+        sig_alg = (EVP_MD *)EVP_sha256();
 	} else {
 		fprintf(stderr, "%s: unsupported algorithm: %s\n",
 			pname, S_char);
